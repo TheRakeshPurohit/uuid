@@ -20,7 +20,6 @@ export default [
         ...globals.commonjs,
         ...globals.jest,
         ...globals.node,
-        msCrypto: true,
       },
     },
   },
@@ -34,14 +33,6 @@ export default [
     },
   },
   {
-    ignores: [
-      'eslint.config.cjs',
-      '!.babelrc.js',
-      '.local/',
-      '**/dist/',
-      'node_modules/',
-      // We have to ignore this until @babel/eslint-parser supports import assertions
-      '**/package.mjs',
-    ],
+    ignores: ['eslint.config.cjs', '.local/', '**/dist/', 'node_modules/'],
   },
 ];
